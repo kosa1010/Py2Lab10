@@ -11,13 +11,20 @@ DataFrame - dwuwymiarowa tabela danych (jak arkusz kalkulacyjny)
 import pandas as pd
 
 # Tworzenie DataFrame
-data = {
-    'Imię': ['Anna', 'Jan', 'Maria', 'Krzysztof'],
-    'Wiek': [25, 32, 28, 40],
-    'Miasto': ['Warszawa', 'Kraków', 'Gdańsk', 'Wrocław']
-}
-df = pd.DataFrame(data)
+df = pd.DataFrame({
+    'Imię': ['Anna', 'Jan', 'Kasia', 'Piotr'],
+    'Wiek': [23, 35, 29, 40],
+    'Miasto': ['Warszawa', 'Kraków', 'Poznań', 'Warszawa']
+})
+
 print(df)
+
+# Filtrowanie danych
+print(df[df['Wiek'] > 30])
+
+# Grupowanie
+grupa = df.groupby('Miasto')['Wiek'].mean()
+print(grupa)
 ```
 
 #### Zadanie 1: Podstawowe operacje
@@ -80,7 +87,7 @@ dane = {
 - Znajdź pracownika z najdłuższym stażem
 - Dodaj kolumnę z premią (10% wynagrodzenia dla stażu >3 lata, 5% dla pozostałych)
 
-### Zadanie 5: Praca z HDF5
+#### Zadanie 5: Praca z HDF5
 Stwórz plik HDF5 z danymi sensorów (temperatura, wilgotność, czas odczytu)
 - Zapisz dane z tygodnia (możesz użyć danych losowych)
 - Odczytaj tylko dane z temperaturą powyżej 25 stopni
