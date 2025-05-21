@@ -1,6 +1,5 @@
-## Biblioteka Pandas i h5py.
-[Pandas](https://pandas.pydata.org/docs/user_guide/index.html)
-[h5py](https://docs.h5py.org/en/latest/quick.html)
+## Biblioteka [Pandas](https://pandas.pydata.org/docs/user_guide/index.html) i [h5py](https://docs.h5py.org/en/latest/quick.html).
+
 Co to jest Pandas?
 Pandas to potężna biblioteka Pythona do analizy i manipulacji danych. Główne struktury danych to:
 Series - jednowymiarowa tablica z etykietami
